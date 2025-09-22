@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
+import logo from "./assets/react.svg"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+function App(){
+  return(
+    <div className = "container-fluid">
+      <div className = "form-container">
+        <div className = "logo-div"><img src = {logo}></img></div>
+        <div className="login-div">Login</div>
+        <div className="input-container">
+          <input className = "username-input" type = "text" placeholder = "Username" required />
+          <input className = "password-input" type = "password" placeholder = "Password" required />
+        </div>
+        <div className="link-container">
+          <p id = "register">Don't have an account? <a href = "#">Register!</a></p>
+        </div>
+        <div className="button-container">
+          <button type = "submit">Submit</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;
